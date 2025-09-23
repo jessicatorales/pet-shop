@@ -1,0 +1,186 @@
+body {
+    background-color: rgb(235, 218, 226);
+    padding: 10px;
+    margin: 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    min-height: 70px;
+    align-items: center;
+    padding: 10px;
+}
+
+header img {
+    width: 85px;
+    border-radius: 50%;
+    border: 1;
+    border-color: rgb(128, 128, 128);
+    border-style: solid;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 70px;
+    margin-right: 10px;
+}
+
+nav a {
+    font-weight: 600;
+    padding-right: 10px;
+}
+
+nav a:hover {
+    color: rgb(173, 124, 214);
+    transition: 0.5s ease-in-out, transform 0.3s ease;
+}
+
+
+main h1 {
+    margin: 0;
+    font-size: 5em;
+    color: rgb(112, 25, 98);
+    font-weight: bold;
+    text-align: center;
+    padding: 12px;
+
+}
+
+
+
+main img {
+    border: 1;
+    border-color: rgb(128, 128, 128);
+    border-style: solid;
+    border-radius: 12px;
+}
+
+
+.container-titulo p {
+    font-size: x-large;
+    color: rgb(156, 56, 140);
+    text-align: center;
+    font-weight: bold;
+}
+
+
+
+.container-imagenes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* Dos columnas de igual ancho */
+    gap: 20px;
+    /* Espacio entre la imagen grande y el grid */
+    align-items: stretch;
+    /* Asegura que ambos lados tengan la misma altura */
+    max-width: 800px;
+    /* Ancho máximo del contenedor */
+    margin: 0 auto;
+    /* Centra el contenedor horizontalmente */
+}
+
+.container-imagenes>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Ajusta la imagen grande sin distorsionar */
+}
+
+.imagenes-mascota {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* Grid 2x2 */
+    grid-template-rows: repeat(2, 1fr);
+    /* Dos filas de igual altura */
+    gap: 20px;
+    /* Espacio entre las imágenes del grid */
+}
+
+.imagenes-mascota img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Ajusta las imágenes del grid sin distorsionar */
+}
+
+.imagenes-accesorios {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.imagenes-accesorios img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.imagenes-accesorios {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.imagenes-accesorios img {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+}
+
+/* Media query para pantallas de hasta 1024px */
+@media (max-width: 1024px) {
+    header h1 {
+        font-size: 50px;
+    }
+    header img {
+        object-fit: cover;
+    }
+    nav a {
+        font-size: 36px;
+    }
+    .imagenes-accesorios {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+        grid-template-rows: repeat(auto-fit, minmax(350px, 1fr)); /* Filas automáticas, cada una al menos 350px de alto */
+        gap: 20px;
+        justify-items: center; /* Centra las imágenes horizontalmente en cada celda */
+    }
+
+    .imagenes-accesorios img {
+        width: 100%; /* Ocupa el ancho disponible de la celda, pero como justify-items centra, se ajusta */
+        max-width: 350px; /* Limita el ancho máximo para que no se estire demasiado */
+        height: 350px; /* Mantiene la altura fija */
+        object-fit: cover;
+    }
+}
+
+@media (max-width:500px) {
+    header {
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav {
+        padding: 10px 0px;
+    }
+
+    main h1 {
+        font-size: xx-large;
+    }
+
+    .imagenes-accesorios {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+}
