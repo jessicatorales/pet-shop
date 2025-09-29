@@ -7,7 +7,7 @@
 
 
 body {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./img/icon/icon-fondo2.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("./img/icon/icon-fondo2.jpg");
     display: flex;
     height: 100vh;
     flex-direction: column;
@@ -21,15 +21,36 @@ a {
 header {
     display: flex;
     justify-content: space-between;
-    min-height: 70px;
     align-items: center;
-    padding: 10px;
+    min-height: 70px;
+    position: fixed;
+    /* Lo hace fijo */
+    top: 0;
+    /* Pegado arriba */
+    left: 0;
+    width: 100%;
+    /* Ocupa todo el ancho */
+    z-index: 100;
+    /* Sombra sutil opcional */
+
 }
+
+/* 
+header {
+  position: fixed;  
+  top: 0;            
+  left: 0;           
+  width: 100%;      
+  z-index: 10;     
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+} */
+
 
 header h1 {
     color: rgb(245, 173, 229);
     text-shadow: 2px 2px black;
-
+    font-size: 45px;
 }
 
 
@@ -57,17 +78,22 @@ nav a {
     padding-right: 10px;
     color: rgb(245, 173, 229);
     text-shadow: 2px 2px black;
-    transition: color 0.3s ease, transform 0.3s ease; /* Transición para color y transform */
-    display: inline-block; /* Necesario para que transform funcione correctamente */
+    transition: color 0.3s ease, transform 0.3s ease;
+    /* Transición para color y transform */
+    display: inline-block;
+    /* Necesario para que transform funcione correctamente */
+    font-size: 25px;
 }
 
 nav a:hover {
     color: rgb(173, 124, 214);
-    transform: scale(1.2); /* Aumenta el tamaño un 20% (ajusta según prefieras) */
+    transform: scale(1.2);
+    /* Aumenta el tamaño un 20% (ajusta según prefieras) */
 }
 
 main {
     margin: 10px;
+    padding-top: 100px;
 }
 
 main h1 {
@@ -90,7 +116,9 @@ main img {
     border-radius: 12px;
 }
 
-
+.container-titulo{
+    padding-top: 100px;
+}
 .container-titulo p {
     font-size: x-large;
     color: rgb(245, 173, 229);
@@ -162,6 +190,13 @@ main img {
     /* Evita espacios no deseados debajo de la imagen */
 }
 
+.container-contacto {
+    color: rgb(245, 173, 229);
+    font-size: 25px;
+    text-shadow: 2px 2px black;
+    margin-top: 100px;
+}
+
 /* Media query para pantallas de hasta 1024px */
 @media (max-width: 1024px) {
     .imagenes-accesorios {
@@ -204,12 +239,15 @@ main img {
     }
 }
 
+
 footer {
     padding: 10px;
     display: flex;
-    gap: 4px;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
 }
-
 
 footer img {
     width: 50px;
@@ -217,7 +255,13 @@ footer img {
     padding: 5px;
 }
 
-.container-iconos {
+footer a {
+    color: rgb(223, 223, 223);
+    font-size: 25px;
+    text-shadow: 2px 2px black;
+}
+
+.container-redes-soc {
     display: flex;
     justify-content: flex-end;
 }

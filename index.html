@@ -7,30 +7,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@200..700&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@200..700&display=swap"
         rel="stylesheet">
 </head>
 
 <body>
-    <header>
+    <header id="navbar">
         <a href="#" class="logo">
             <img src="img/logo.png" alt="logo de la pagina">
             <h1>Pet Shop</h1>
         </a>
         <nav>
-            <a href="" class="nav-link">Inicio</a>
-            <a href="" class="nav-link">Accesorios</a>
-            <a href="" class="nav-link">Contacto</a>
+            <a href="#inicio" class="nav-link">Inicio</a>
+            <a href="#accesorios" class="nav-link">Accesorios</a>
+            <a href="#contacto" class="nav-link">Contacto</a>
         </nav>
-
-
     </header>
+
     <main>
-        <div class="container-titulo">
+        <!-- Sección INICIO -->
+        <div id="inicio" class="container-titulo">
             <h1>Juguetes Para Tu Mascota</h1>
             <p>¡Sumérgete en un mundo de juegos seguros y de alta calidad!
                 En nuestra tienda encontrarás la mejor selección de juguetes
-                para cada edad y etapa de vida de tu mascota. Descubre innovaciones que 
+                para cada edad y etapa de vida de tu mascota. Descubre innovaciones que
                 mantienen su mente ágil y su cuerpo en forma, diseñados para horas de entretenimiento
                 y desarrollo ¡Porque una mascota feliz es una mascota sana!
             </p>
@@ -46,7 +47,8 @@
             </div>
         </div>
 
-        <div class="container-accesorios">
+        <!-- Sección ACCESORIOS -->
+        <div id="accesorios" class="container-accesorios">
             <h1>Accesorios</h1>
             <div class="imagenes-accesorios">
                 <img src="img/pechera-perro.webp" alt="accesorios">
@@ -59,13 +61,22 @@
                 <img src="img/peluche-gato.webp" alt="accesorios">
             </div>
         </div>
+
+        <!-- Sección CONTACTO -->
+        <div id="contacto" class="container-contacto">
+            <p>Puedes escribirnos a: <strong>info@petshop.com</strong></p>
+            <p>Teléfono: +54 11 1234 5678</p>
+        </div>
     </main>
+
+   
     <footer class="container-iconos">
+        <a>2025 - Todos los derechos reservados</a>
         <img src="./img/icon/icon-instagram.png" alt="Instagram oficial">
         <img src="./img/icon/icon-facebook.png" alt="facebook oficial">
         <img src="./img/icon/icon-tiktok.png" alt="tiktok oficial">
-    </footer>
 
+    </footer>
 </body>
 
 </html>
